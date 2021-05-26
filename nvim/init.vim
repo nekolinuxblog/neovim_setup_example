@@ -26,7 +26,7 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+  Plug 'preservim/nerdtree'
 
 call plug#end()
 
@@ -85,5 +85,12 @@ set textwidth=0
 set clipboard=unnamedplus
 
 set cursorline
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" nerdtree
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+nnoremap <silent><C-e> :NERDTreeToggle<CR>
 
 
