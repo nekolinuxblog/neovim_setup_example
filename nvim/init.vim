@@ -27,6 +27,8 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
 call plug#begin('~/.vim/plugged')
 
   Plug 'preservim/nerdtree'
+  Plug 'vim-airline/vim-airline'
+  Plug 'vim-airline/vim-airline-themes'
 
 call plug#end()
 
@@ -90,7 +92,15 @@ set cursorline
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " nerdtree
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 nnoremap <silent><C-e> :NERDTreeToggle<CR>
 
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" vim-airline
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:airline_powerline_fonts = 0
+let g:airline#extensions#tabline#enabled = 1
+map <C-p> <Plug>AirlineSelectPrevTab
+map <C-n> <Plug>AirlineSelectNextTab
 
